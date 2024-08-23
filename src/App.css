@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body {
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App Container */
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Weather Card */
+.weather-card {
+  position: relative;
+  background: url('../public/pexels-jplenio-1118873.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Backgrounds for Different Weather Conditions */
+.weather-card.clear-sky {
+  background: url('../public/clear\ sky.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.weather-card.cloudy {
+  background: url('../public/cloudy.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.weather-card.rainy {
+  background: url('../public/Rainy.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.weather-card.snowy {
+  background: url('../public/Snow.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.weather-card.misty {
+  background: url('../public/misty\ mornung.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.weather-card.default {
+  background: url('../public/pexels-eberhardgross-2310713.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.weather-info {
+  position: relative;
+  z-index: 1;
+}
+
+.weather-info h2 {
+  margin-top: 20px;
+  font-size: 2em;
+  color: #fff;
+}
+
+/* Weather Details */
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.weather-card {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  color: #fff;
+  position: relative;
+}
+.weather-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+  color: #f0f0f0;
+}
+.weather-box span {
+  font-weight: bold;
+}
+
+/* Weather Icon */
+
+.weather-info img {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+/* Input Group code css*/
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+
+.input-group button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  background-color: #1c86ee;
+}
+
+/* Toggle Button css code */
+.toggle-button {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #ff4500;
+}
+
+
+
+/* Responsive website css */
+@media (max-width: 768px) {
+  .weather-card {
+    max-width: 90%;
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-details {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
+
+  .weather-info img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-card {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .input-group input {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  .input-group button {
+    padding: 8px 10px;
+  }
+
+  .toggle-button {
+    padding: 8px;
+  }
+}
+body {
+  background: url('..//public/pexels-enginakyurt-1486861.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
